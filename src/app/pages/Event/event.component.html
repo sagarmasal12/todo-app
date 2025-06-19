@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Task1(Click Event)</h5>
+                    <ul>
+                        <li>
+                            Create a button <b>Click Me.</b>
+                        </li>
+                        <li>
+                            On the click on button showcase alert with text Hello Javascript
+                        </li>
+                        <li>
+                            Example:
+                        </li>
+
+                         <div class="btn btn-sm btn-primary mt-2 " (click)="onClick()"> Click Me</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row mt-4"> -->
+            <div class="col-4">
+                <div class="card pb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Task2 (Onblur Event or Onchange)</h5>
+                        <li>Take three textboxes.</li>
+                        <li>Do multiplication of textbox 1 and 2 and store the result in textbox 3.</li>
+                        <li>Example:</li>
+                        <div class="d-flex gap-2 mt-2">
+                            <input type="number" class="form-control" style="width: 50%" #num1
+                                (input)="multiplyValues(num1.value, num2.value)">
+                            <input type="number" class="form-control" style="width: 50%" #num2
+                                (input)="multiplyValues(num1.value, num2.value)"> =
+                            <input type="number" class="form-control" style="width: 50%" [value]="result" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Task 3 (Keydown Event)</h5>
+                    <li>Take a one textbox and apply Keydown event in that textbox
+                    </li>
+                    <li> On the click on textbox you have to showcase alert box and show the message (You have pressed a
+                        key inside text input!)</li>
+                    <li>Example:</li>
+                    <input type="text" class="form-control" (keydown)="onkeyDown()">
+                </div>
+            </div>
+        </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Task4(Change Event)</h5>
+                        <ul>
+                            <li>
+                                Create a dropdown with options of fruits
+                            </li>
+                            <li>
+                                add on change event and show selected value in strong tag
+                            </li>
+                            <li>Example:</li>
+                            <div class="row">
+                                <div class="col-6 pt-2">
+                                    <select name="" id="" class="form-control" [(ngModel)]="mySelectedFruit"
+                                        (change)="onchangeFruits()">
+                                        <option value="" selected disabled>Select Fruits</option>
+                                        <option value="Orange">Orange</option>
+                                        <option value="Apple">Apple</option>
+                                        <option value="Mango">Mango</option>
+                                        <option value="Pappaya">Pappaya</option>
+                                        <option value="Watermelon">Watermelon</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 pt-2">
+                                    <p id="printFruit">{{mySelectedFruit}}</p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
