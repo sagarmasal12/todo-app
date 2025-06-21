@@ -1,0 +1,41 @@
+
+
+<div class="container mt-4">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Mobile No.</th>
+          <th>Designation</th>
+          <th>Date of Joining</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody formArrayName="employees">
+        <tr *ngFor="let emp of employees.controls; let i = index" [formGroupName]="i">
+          <td>{{ i + 1 }}</td>
+          <td><input type="text" class="form-control" formControlName="firstName"></td>
+          <td><input type="text" class="form-control" formControlName="lastName"></td>
+          <td><input type="text" class="form-control" formControlName="mobile"></td>
+          <td>
+            <select class="form-select" formControlName="designation">
+              <option value="">Select</option>
+              <option value="Sarpanch/सरपंच">Sarpanch/सरपंच</option>
+              <option value="Upsarpanch/उपसरपंच">Upsarpanch/उपसरपंच</option>
+              <option value="Police Patil/पोलीस पाटील">Police Patil/पोलीस पाटील</option>
+            </select>
+          </td>
+          <td><input type="date" class="form-control" formControlName="doj"></td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeEmployeeRow(i)">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-success" (click)="addEmployeeRow()">➕ Add Row</button>
+    <button type="submit" class="btn btn-primary float-end">Save All</button>
+  </form>
+</div>

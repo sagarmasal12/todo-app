@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <div class="btn btn-success float-end mb-5" (click)="backtoList()">Back to List</div>
+
+  <div class="row mt-5">
+    <h4>View Water Tax User</h4>
+    <hr />
+
+    <div class="form-group col-sm-3 flex-column d-flex">
+      <label><b>First Name</b></label>
+      <p>{{ user?.fname || '--' }}</p>
+    </div>
+    <div class="form-group col-sm-3 flex-column d-flex">
+      <label><b>पहिले नाव</b></label>
+      <p>--</p>
+    </div>
+    <div class="form-group col-sm-3 flex-column d-flex">
+      <label><b>Last Name</b></label>
+      <p>{{ user?.lname || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column d-flex">
+      <label><b>Native Name</b></label>
+      <p>{{ user?.fname || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column d-flex">
+      <label><b>Email</b></label>
+      <p>{{ user?.email || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Mobile No</b></label>
+      <p>{{ user?.mobno || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Address</b></label>
+      <p>{{ user?.address || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Pin Code</b></label>
+      <p>{{ user?.pincode || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Village</b></label>
+      <p>{{ user?.village || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Gender</b></label>
+      <p>{{ user?.gender || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Date of Birth</b></label>
+      <p>{{ user?.dob || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Aadhar Number</b></label>
+      <p>{{ user?.aadhar || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Pan Number</b></label>
+      <p>{{ user?.pan || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Ward Number</b></label>
+      <p>{{ user?.ward || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Property Type</b></label>
+      <p>{{ user?.property || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Family Count</b></label>
+      <p>{{ user?.familycount || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Religion</b></label>
+      <p>{{ user?.religion || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Cast</b></label>
+      <p>{{ user?.cast || '--' }}</p>
+    </div>
+    <div class="col-3 flex-column">
+      <label><b>Subcast</b></label>
+      <p>{{ user?.subcast || '--' }}</p>
+    </div>
+  </div>
+</div>
