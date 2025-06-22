@@ -1,17 +1,4 @@
 import { Routes } from '@angular/router';
-<<<<<<< HEAD
-import { HomeComponent } from './pages/Event/home/home.component';
-import { EventComponent } from './pages/Event/event.component';
-
-export const routes: Routes = [
-    {
-        path:"home",
-        component:HomeComponent
-    },
-    {
-        path:'event-task',
-        component:EventComponent
-=======
 import { WatertaxTypeComponent } from './pages/watertax-type/watertax-type.component';
 import { WatertaxFormComponent } from './pages/watertax-form/watertax-form.component';
 import { WaterTaxComponent } from './pages/water-tax/water-tax.component';
@@ -38,6 +25,5 @@ export const routes: Routes = [
     {
         path:"editpage",
         component:EditpageComponent
->>>>>>> view-watertax
     }
 ];
