@@ -6,7 +6,10 @@ import { ViewpageComponent } from './pages/viewpage/viewpage.component';
 import { EditpageComponent } from './pages/editpage/editpage.component';
 
 export const routes: Routes = [
-    {path:'',component:WatertaxTypeComponent},
+    {
+        path:'',
+        component:WatertaxTypeComponent
+    },
     {
         path:"watertax-type",
         component:WatertaxTypeComponent
@@ -16,7 +19,7 @@ export const routes: Routes = [
         component:WatertaxFormComponent
     },
     {
-        path:"viewpage",
+        path:"viewpage/:id",
         component:ViewpageComponent
     },
     {

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { waterTaxstatus } from '../models/water-tax';
+import { WatertaxServiceService } from '../service/watertax-service.service';
 
 @Component({
   selector: 'app-viewpage',
@@ -9,13 +11,26 @@ import { Router } from '@angular/router';
 })
 export class ViewpageComponent {
 
-  user: any;
+  waterTaxsta!:waterTaxstatus;
+  
+  
 
-  constructor(private router: Router) {
-    const nav = this.router.getCurrentNavigation();
-    this.user = nav?.extras?.state?.['user'];
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private watertaxService : WatertaxServiceService
+
+  ) {}
+
+  ngOnInit(): void {
+    const idParam = this.route.snapshot.paramMap.get('id');
+    if(idParam){
+      const id = +idParam;
+      this.waterTaxsta= this.watertaxService.taxUsersList.find(
+        (obj)=> obj.id === id
+      )!
+    }
   }
-
   backtoList() {
     this.router.navigateByUrl("/watertax-type");
   }

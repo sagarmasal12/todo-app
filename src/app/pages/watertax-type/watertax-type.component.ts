@@ -21,6 +21,10 @@ export class WatertaxTypeComponent {
   adduser(){
     this.router.navigateByUrl("/watertax-form")
   }
+  onViewclick(id:number){
+    this.router.navigateByUrl(`/viewpage/${id}`)
+
+  }
   
 
   get waterTaxStatuses(){
