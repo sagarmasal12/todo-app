@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "todo-app": {
+=======
+    "water-tax": {
+>>>>>>> view-watertax
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/todo-app",
+=======
+            "outputPath": "dist/water-tax",
+>>>>>>> view-watertax
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,9 +35,19 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
               "src/styles.css"
             ],
             "scripts": []
+=======
+              "src/styles.css",
+               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+>>>>>>> view-watertax
           },
           "configurations": {
             "production": {
@@ -59,10 +77,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "todo-app:build:production"
             },
             "development": {
               "buildTarget": "todo-app:build:development"
+=======
+              "buildTarget": "water-tax:build:production"
+            },
+            "development": {
+              "buildTarget": "water-tax:build:development"
+>>>>>>> view-watertax
             }
           },
           "defaultConfiguration": "development"
@@ -94,6 +119,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "9e92560d-04a0-4833-b9d7-409410eaf46b"
+=======
+    "analytics": "1b4fc2c8-e095-4580-bfe3-faf3210ba787"
+>>>>>>> view-watertax
   }
 }
