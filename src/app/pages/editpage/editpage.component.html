@@ -1,9 +1,9 @@
 <div class="container mt-5">
     <div class="btn btn-success float-end mb-5" (click)="backtoList()">Back to list</div>
-
+  
     <form class="mb-3" [formGroup]="myform" (ngSubmit)="onSubmit()">
         <div class="row mt-5">
-            <h4 id="displayOnEdit">Edit Water Tax User</h4>
+            <h4 id="displayOnEdit">{{editId?'Edit':'Add'}} Water Tax User</h4>
             <hr>
             <div class="col-3 mb-2 flex-column d-flex">
                 <label>FirstName</label>

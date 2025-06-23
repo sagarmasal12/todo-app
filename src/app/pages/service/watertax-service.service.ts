@@ -24,6 +24,7 @@ export class WatertaxServiceService {
   ]
 
   addwaterTaxStatus(obj:waterTaxstatus){
+    debugger
     obj['id'] = this.taxUsersList.length+1;
     this.taxUsersList.push(obj);
   }
