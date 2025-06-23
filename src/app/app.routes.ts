@@ -23,7 +23,11 @@ export const routes: Routes = [
         component:ViewpageComponent
     },
     {
-        path:"editpage",
+        path:"add-waterTax-status",
+        component:EditpageComponent
+    },
+    {
+        path:"editpage/:id",
         component:EditpageComponent
     }
 ];

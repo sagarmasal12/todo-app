@@ -19,13 +19,25 @@ export class WatertaxTypeComponent {
   }
 
   adduser(){
-    this.router.navigateByUrl("/watertax-form")
+    this.router.navigateByUrl("/add-waterTax-status");
   }
   onViewclick(id:number){
     this.router.navigateByUrl(`/viewpage/${id}`)
 
   }
-  
+  editwatertaxStatus(id:number){
+    this.router.navigateByUrl(`/editpage/${id}`);
+  }
+ 
+  deletewaterTaxuser(id:number){
+    const confirmed = confirm(
+      "are you sure want to delete this user"
+    )
+    if(confirmed){
+      debugger
+      this.watertaxSer.deleteWaterTaxUsers(id)
+    }
+  }
 
   get waterTaxStatuses(){
     return this.watertaxSer

@@ -1,42 +1,31 @@
 <div class="container mt-5">
-    <div class="btn btn-success float-end mb-5" (click)="onBacktolist()">Back to list</div>
+    <div class="btn btn-success float-end mb-5" (click)="backtoList()">Back to list</div>
 
-    <form class="mb-3">
+    <form class="mb-3" [formGroup]="myform" (ngSubmit)="onSubmit()">
         <div class="row mt-5">
             <h4>Edit Water Tax User</h4>
             <hr>
             <div class="col-3 mb-2 flex-column d-flex">
                 <label>FirstName</label>
-                <input class="form-control" type="text" value="Sagar" />
+                <input class="form-control" type="text" name="firstName"  formControlName="firstName" />
             </div>
             <div class="col-3 flex-column d-flex">
-                <label>Middle Name</label>
-                <input class="form-control" type="text" value="Sahebrao" />
+                <label>LastName</label>
+                <input class="form-control"  type="text" name="lname" formControlName="lastName"/>
             </div>
             <div class="col-3 flex-column d-flex">
-                <label>Last Name</label>
-                <input class="form-control" type="text" value="Masal" />
+                <label>Designation</label>
+                <input class="form-control" type="text" name="designation" formControlName="designation" />
             </div>
             <div class="col-3 flex-column d-flex">
                 <label>Property Type</label>
                 <input class="form-control" type="text" value="--" />
             </div>
-            <div class="col-3 flex-column d-flex">
-                <label>पहिले नाव</label>
-                <input class="form-control" type="text" value="--" />
-            </div>
-            <div class="col-3 flex-column d-flex">
-                <label>मधले नाव</label>
-                <input class="form-control" type="text" value="Sahebrao" />
-            </div>
-            <div class="col-3 flex-column d-flex">
-                <label>आडनाव</label>
-                <input class="form-control" type="text" value="Masal" />
-            </div>
-            <div class="col-3 flex-column d-flex">
-                <label>Email</label>
-                <input class="form-control" type="text" value="--" />
-            </div>
+           
+        </div>
+        <div class="d-flex">
+            <button type="submit" class="btn btn-success">{{editId !== null? "Update":"Add"}}</button>
+            <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
         </div>
     </form>
 </div>

@@ -17,5 +17,24 @@ export class WatertaxServiceService {
 
   ]
 
+  addwaterTaxStatus(obj:waterTaxstatus){
+    obj['id'] = this.taxUsersList.length+1;
+    this.taxUsersList.push(obj);
+  }
 
+  updateWaterTaxStatus(id:number, obj:waterTaxstatus){
+    this.taxUsersList = this.taxUsersList.map((waterStatusObj)=>{
+      if(waterStatusObj.id === id){
+        obj['id']=id;
+        return obj
+      }
+      return waterStatusObj
+    })
+  }
+
+  deleteWaterTaxUsers(id:number){
+    this.taxUsersList = this.taxUsersList.filter((obj)=> obj.id !== id)
+    console.log(this.taxUsersList)
+  }
+  
 }
