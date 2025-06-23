@@ -3,15 +3,23 @@
 
     <form class="mb-3" [formGroup]="myform" (ngSubmit)="onSubmit()">
         <div class="row mt-5">
-            <h4>Edit Water Tax User</h4>
+            <h4 id="displayOnEdit">Edit Water Tax User</h4>
             <hr>
             <div class="col-3 mb-2 flex-column d-flex">
                 <label>FirstName</label>
                 <input class="form-control" type="text" name="firstName"  formControlName="firstName" />
             </div>
             <div class="col-3 flex-column d-flex">
+                <label>Middle Name</label>
+                <input class="form-control"  type="text" name="middleName" formControlName="middleName"/>
+            </div>
+            <div class="col-3 flex-column d-flex">
                 <label>LastName</label>
-                <input class="form-control"  type="text" name="lname" formControlName="lastName"/>
+                <input class="form-control"  type="text" name="lastName" formControlName="lastName"/>
+            </div>
+             <div class="col-3 flex-column d-flex">
+                <label>Mobile No</label>
+                <input class="form-control"  type="text" name="mobileNumber" formControlName="mobileNumber"/>
             </div>
             <div class="col-3 flex-column d-flex">
                 <label>Designation</label>

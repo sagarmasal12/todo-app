@@ -9,11 +9,17 @@ export class WatertaxServiceService {
   constructor() { }
 
     taxUsersList:waterTaxstatus[] = [
-    {id:1, firstName:"Rajesh", lastName: 'kadam', designation: 'Angular developer'},
-    {id:2, firstName:"Harsh", lastName: 'sande', designation:'Java Deve'},
-    {id:3, firstName:"Vishal", lastName: 'patil', designation:'Php Deve'},
-    {id:4, firstName:"Tushar", lastName: 'Jadhav', designation:'Angular Deve'},
-    {id:5, firstName:"Sharad", lastName: 'Kharat', designation:'Python Deve'}
+    {id:1, firstName:"Rajesh",middleName:'--',mobileNumber:'9226' ,lastName: 'kadam' ,designation: 'Angular developer'},
+    {id:2, firstName:"Harsh",middleName:'--',mobileNumber:'5465' , lastName: 'sande', designation:'Java Deve'},
+    {id:3, firstName:"Vishal",middleName:'--',mobileNumber:'6565' , lastName: 'patil', designation:'Php Deve'},
+    {id:4, firstName:"Kunal",middleName:'oaasd',mobileNumber:'5447' , lastName: 'patil', designation:'Php Deve'},
+    {id:5, firstName:"Sharad",middleName:'anasdf',mobileNumber:'2288' , lastName: 'Kharat', designation:'Python Deve'},
+    {id:6, firstName:"Vijay", middleName:'--',mobileNumber:'5599', lastName: 'Mane', designation: 'Data Engineer'},
+    {id:7, firstName:"Mayur", middleName:'--',mobileNumber:'7894',lastName: 'Masal', designation:'Cloud Engi'},
+    {id:7, firstName:"Mayur",middleName:'--',mobileNumber:'6356' , lastName: 'Masal', designation:'Cloud Engi'},
+    {id:8, firstName:"Sid",middleName:'--',mobileNumber:'5966' , lastName: 'Jadhav', designation:'Php Deve'},
+    {id:9, firstName:"Rahul",middleName:'--',mobileNumber:'5999' , lastName: 'Thik', designation:'Js Deve'},
+    {id:10, firstName:"Nitesh",middleName:'--',mobileNumber:'5588' , lastName: 'Kharwar', designation:'Java Deve'}
 
   ]
 

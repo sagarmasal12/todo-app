@@ -32,6 +32,8 @@ export class EditpageComponent  {
     this.myform=this.fb.nonNullable.group({
       firstName:[''],
       lastName:[''],
+      middleName:[''],
+      mobileNumber:[''],
       designation:['']
     })
     const idParam = this.route.snapshot.paramMap.get('id');
@@ -43,8 +45,11 @@ export class EditpageComponent  {
 
       this.myform.patchValue({
         firstName:waterTaxstatus?.firstName,
+        
         lastName:waterTaxstatus?.lastName,
-        designation:waterTaxstatus?.designation
+        designation:waterTaxstatus?.designation,
+        middleName:waterTaxstatus?.middleName,
+        mobileNumber:waterTaxstatus?.mobileNumber
       })
     }
   }
