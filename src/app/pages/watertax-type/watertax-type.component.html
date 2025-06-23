@@ -1,5 +1,6 @@
 <div class="container mt-4">
   <div class="btn btn-success float-end mb-5" (click)="adduser()">Add Water-Tax User</div>
+  <input type="text" class="form-control w-25 mb-3" placeholder="Search..." [(ngModel)]="searchText" (input)="onSearch()">
 
   <table class="table table-bordered table-striped text-center mt-5">
     <thead class="table-dark">
@@ -13,25 +14,28 @@
         <th>Action</th>
       </tr>
     </thead>
-    <tbody *ngIf="waterTaxStatuses.taxUsersList.length>0; else noData">
-      <tr *ngFor="let status of waterTaxStatuses.taxUsersList; let i = index">
-        <td>{{i + 1}}</td>
-        <td>{{status.firstName}}</td>
-        <td>{{status.lastName}}</td>
-        <td>{{status.middleName}}</td>
-        <td>{{status.mobileNumber}}</td>
-        <td>{{status.designation}}</td>
+
+    <!--  Use filteredUsers instead -->
+    <tbody *ngIf="filteredUsers.length > 0; else noData">
+      <tr *ngFor="let status of filteredUsers; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ status.firstName }}</td>
+        <td>{{ status.lastName }}</td>
+        <td>{{ status.middleName }}</td>
+        <td>{{ status.mobileNumber }}</td>
+        <td>{{ status.designation }}</td>
         <td>
-          <i class="bi bi-eye pe-1 text-primary" style=" cursor: pointer;" (click)="onViewclick(status.id)"></i>
+          <i class="bi bi-eye pe-1 text-primary" style="cursor: pointer;" (click)="onViewclick(status.id)"></i>
           <i class="bi bi-pencil-square text-warning" style="cursor: pointer;" (click)="editwatertaxStatus(status.id)"></i>
-          <i class="bi bi-trash ps-1 text-danger" style="cursor: pointer;" (click)="deletewaterTaxuser(status.id)" ></i>
+          <i class="bi bi-trash ps-1 text-danger" style="cursor: pointer;" (click)="deletewaterTaxuser(status.id)"></i>
         </td>
       </tr>
     </tbody>
-     <ng-template #noData>
-        <tr>
-          <td colspan="4" class="text-center">No payment statuses found.</td>
-        </tr>
-      </ng-template>
+
+    <ng-template #noData>
+      <tr>
+        <td colspan="7" class="text-center">No payment statuses found.</td>
+      </tr>
+    </ng-template>
   </table>
 </div>
