@@ -34,9 +34,9 @@ export class WatertaxServiceService{
     {id:23, firstName:"Prashant",middleName:'--',mobileNumber:'5999' , lastName: 'Virkar', designation:'Js Deve'},
     {id:24, firstName:"Hari",middleName:'--',mobileNumber:'5588' , lastName: 'Kale', designation:'Java Deve'}
 
-
   ]
   
+
 
   addwaterTaxStatus(obj:waterTaxstatus){
     debugger

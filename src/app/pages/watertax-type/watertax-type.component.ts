@@ -3,6 +3,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 import { WatertaxServiceService } from '../service/watertax-service.service';
 import { FormsModule } from '@angular/forms';
+import { DeferBlockFixture } from '@angular/core/testing';
 
 @Component({
   selector: 'app-watertax-type',
@@ -15,6 +16,8 @@ export class WatertaxTypeComponent implements OnInit {
   searchText: string = '';
   usersPerPage: number = 5;
   currentPage: number = 1;
+  // pages = [1, 2, 3, 4, 5];  // or generate dynamically
+  // currentPage = 1;
 
   filteredUsers: any[] = [];
   paginatedUsers: any[] = [];
@@ -34,6 +37,7 @@ export class WatertaxTypeComponent implements OnInit {
   }
 
   get totalPages(): number {
+    debugger
     return Math.ceil(this.filteredUsers.length / this.usersPerPage);
   }
 
@@ -78,26 +82,43 @@ export class WatertaxTypeComponent implements OnInit {
     this.paginatedUsers = this.filteredUsers.slice(startIndex, endIndex);
   }
 
+  // goToPage(page: number) {
+  //   this.currentPage = page;
+  //   this.updatePaginatedUsers();
+  // }
+
   goToPage(page: number) {
-    this.currentPage = page;
-    this.updatePaginatedUsers();
+  this.currentPage = page;
+    // Add your page logic here
   }
 
+
   previousPage() {
+    // debugger
     if (this.currentPage > 1) {
+      debugger
       this.currentPage--;
       this.updatePaginatedUsers();
     }
   }
 
+
   nextPage() {
+    // debugger
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
+      debugger
       this.updatePaginatedUsers();
     }
   }
 
-  changeUsersPerPage() {
+  changeUsersPerPage(event:Event) {
+    debugger
+    const targetValue=event.target as HTMLSelectElement
+    
+    this.usersPerPage=+targetValue.value;
+    console.log(this.usersPerPage);
+    
     this.currentPage = 1;
       const newTotalPages = this.totalPages;
   if (this.currentPage > newTotalPages) {
