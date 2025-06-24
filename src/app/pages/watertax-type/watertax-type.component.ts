@@ -82,15 +82,15 @@ export class WatertaxTypeComponent implements OnInit {
     this.paginatedUsers = this.filteredUsers.slice(startIndex, endIndex);
   }
 
-  // goToPage(page: number) {
-  //   this.currentPage = page;
-  //   this.updatePaginatedUsers();
-  // }
-
   goToPage(page: number) {
-  this.currentPage = page;
-    // Add your page logic here
+    this.currentPage = page;
+    this.updatePaginatedUsers();
   }
+
+  // goToPage(page: number) {
+  // this.currentPage = page;
+  //   // Add your page logic here
+  // }
 
 
   previousPage() {
