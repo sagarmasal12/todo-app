@@ -2,7 +2,7 @@
   <!-- Add Button -->
   <div class="btn btn-success float-end mb-3" (click)="adduser()">Add Water-Tax User</div>
 
-  <!-- Search Input -->
+  <!-- Search input -->
   <input type="text" class="form-control w-25 mb-3" placeholder="Search..." [(ngModel)]="searchText"
     (input)="onSearch()" />
 
@@ -22,7 +22,7 @@
 
     <tbody *ngIf="paginatedUsers.length > 0; else noData">
       <tr *ngFor="let status of paginatedUsers; let i = index">
-        <td>{{ (currentPage - 1) * usersPerPage + i + 1 }}</td>
+        <td>{{ (currentPage - 1) * usersPerPage + i +1}}</td>
         <td>{{ status.firstName }}</td>
         <td>{{ status.lastName }}</td>
         <td>{{ status.middleName || '--' }}</td>
@@ -54,7 +54,7 @@
 
       <ng-container *ngFor="let page of [].constructor(totalPages); let i = index">
         <button class="btn btn-sm me-1" [ngClass]="{
-            'btn-success': currentPage === i + 1,
+            'btn-success': currentPage === i +1,
             'btn-outline-secondary': currentPage !== i + 1
           }" (click)="goToPage(i + 1)">
           {{ i + 1 }}

@@ -13,12 +13,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class WatertaxTypeComponent implements OnInit {
   searchText: string = '';
-  usersPerPage: number = 10;
+  usersPerPage: number = 5;
   currentPage: number = 1;
 
   filteredUsers: any[] = [];
   paginatedUsers: any[] = [];
-  usersPerPageOptions: number[] = [5, 10, 25, 50];
+  usersPerPageOptions: number[] = [5, 10,15, 50];
 
   router = inject(Router);
 
@@ -99,6 +99,10 @@ export class WatertaxTypeComponent implements OnInit {
 
   changeUsersPerPage() {
     this.currentPage = 1;
+      const newTotalPages = this.totalPages;
+  if (this.currentPage > newTotalPages) {
+    this.currentPage = newTotalPages;
+  }
     this.updatePaginatedUsers();
   }
 }
