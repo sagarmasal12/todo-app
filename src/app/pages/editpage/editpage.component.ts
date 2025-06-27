@@ -23,7 +23,7 @@ export class EditpageComponent  {
     private fb:FormBuilder,
     private watertaxService:WatertaxServiceService,
     private route:ActivatedRoute
-
+    
   ){}
 
   
@@ -81,6 +81,7 @@ export class EditpageComponent  {
   }
 
   get statusName(){
+    
     return this.myform.get('statusName') as FormControl;
   }
 
