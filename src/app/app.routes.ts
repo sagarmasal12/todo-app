@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/Event/home/home.component';
-import { EventComponent } from './pages/Event/event.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EventComponent } from './pages/event/event.component';
+import { BirthCertificateComponent } from './Certificates/birth-certificate/birth-certificate.component';
+import { NoDuesCertificateComponent } from './Certificates/no-dues-certificate/no-dues-certificate.component';
 
 export const routes: Routes = [
     {
@@ -10,5 +12,13 @@ export const routes: Routes = [
     {
         path:'event-task',
         component:EventComponent
+    },
+    {
+        path:'birth-certificate',
+        component:BirthCertificateComponent
+    },
+    {
+        path:'No-duesCertificate',
+        component:NoDuesCertificateComponent
     }
 ];
