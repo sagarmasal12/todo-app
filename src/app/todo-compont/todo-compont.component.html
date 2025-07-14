@@ -6,9 +6,11 @@
 
             <p>{{task}}</p>
             @for (item of taskList; track $index) {
-                <ul>
-                    <li>{{item.task}}</li>
-                </ul>
+            <ul class="list-task">
+                <li>{{item.id}}</li>
+                <li>{{item.task}}</li>
+                <li><button (click)="ondelete(item.id)">Delete</button></li>
+            </ul>
             }
         </div>
     </div>

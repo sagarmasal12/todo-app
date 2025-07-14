@@ -16,7 +16,13 @@ export class TodoCompontComponent {
 
   addTask(){
     this.taskList.push({id:this.taskList.length+1, task:this.task});
-
-    console.log(this.taskList)
+    this.task="";
   }
+
+
+  ondelete(id:number){
+    this.taskList = this.taskList.filter(item => item.id !== id)
+    
+  }
+
 }
