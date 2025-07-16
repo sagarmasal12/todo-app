@@ -1,5 +1,18 @@
-<div class="container">
-    <div class="row">
+<style>
+
+</style>
+<div *ngIf="isloading" class="d-flex justify-content-center align-items-center mt-3">
+    <div class="loader">
+
+    </div>
+</div>
+<div *ngIf="successMsg">
+    <h3>{{!successMsg}}</h3>
+</div>
+
+<div *ngIf="!isloading"  class="container">
+    <div *ngIf="successMsg">
+         <div class="row">
         <div class="col-12 mt-4">
             <form action="">
                 <table class="table">
@@ -11,20 +24,37 @@
                             <th>FullName</th>
                             <th>MobileNo</th>
                         </tr>
-
                     </thead>
-                    <!-- <tbody>
-                        <tr>
-                            <td>dzfs</td>
-                            <td>asdf</td>
-                            <td>asdf</td>
-                            <td>asdf</td>
-                            <td>asdf</td>
+                    <tbody>
+                        <!-- @for(item of surveyData; track $index){ -->
+                        <tr *ngFor="let item of surveyData">
+                            <td>{{item.userId}}</td>
+                            <td>{{item.emailId}}</td>
+                            <td>{{item.password}}</td>
+                            <td>{{item.fullName}}</td>
+                            <td>{{item.mobileNo}}</td>
                         </tr>
-
-                    </tbody> -->
+                        <!-- } -->
+                    </tbody>
                 </table>
             </form>
         </div>
+
     </div>
+    </div>
+   
+
 </div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                
+            </div>
+            <div class="col-5">
+
+            </div>
+        </div>
+    </div>
+</section>
