@@ -14,12 +14,10 @@ export class SurveyComponent {
   surveyData:any[]=[];
   isloading:boolean=false;
   
-  successMsg="Api success";
+  // successMsg="Api success";
 
 
-  constructor(private http:HttpClient) { 
-    this.successMsg;
-  }
+  constructor(private http:HttpClient) { }
    
 
 
@@ -43,7 +41,7 @@ export class SurveyComponent {
       complete:()=>{
         debugger
         this.isloading= false;
-        console.log(this.successMsg)
+        // console.log(this.successMsg)
 
       }
     })
