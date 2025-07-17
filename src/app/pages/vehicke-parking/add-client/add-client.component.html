@@ -1,0 +1,66 @@
+<!-- Button to open modal -->
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClientModal">
+  Add Client
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addClientModal" tabindex="-1" aria-labelledby="addClientModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <h5 class="modal-title" id="addClientModalLabel">Add Client</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModalBtn"></button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label">Client Name</label>
+            <input type="text" class="form-control" formControlName="clientName" placeholder="Enter client name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Business Name</label>
+            <input type="text" class="form-control" formControlName="businessName" placeholder="Enter business name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Contact Person</label>
+            <input type="text" class="form-control" formControlName="contactPerson" placeholder="Enter contact person name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Contact No</label>
+            <input type="text" class="form-control" formControlName="contactNo" placeholder="Enter contact number">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Alternate Contact No</label>
+            <input type="text" class="form-control" formControlName="altContactNo" placeholder="Enter alternate number (optional)">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Logo URL</label>
+            <input type="text" class="form-control" formControlName="logo" placeholder="Enter logo image URL">
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-success w-100 mt-3" [disabled]="clientForm.invalid">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Response message -->
+<div *ngIf="message" class="alert alert-info mt-3">
+  {{ message }}
+</div>

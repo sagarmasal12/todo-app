@@ -5,6 +5,7 @@ import { BirthCertificateComponent } from './Certificates/birth-certificate/birt
 import { NoDuesCertificateComponent } from './Certificates/no-dues-certificate/no-dues-certificate.component';
 import { TodoCompontComponent } from './pages/todo-compont/todo-compont.component';
 import { SurveyComponent } from './pages/survey/survey.component';
+import { AddClientComponent } from './pages/vehicke-parking/add-client/add-client.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path:'survey',
         component:SurveyComponent
+    },
+    {
+        path:"addclient",
+        component:AddClientComponent
     }
 ];
