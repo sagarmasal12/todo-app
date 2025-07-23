@@ -6,6 +6,7 @@ import { NoDuesCertificateComponent } from './Certificates/no-dues-certificate/n
 import { TodoCompontComponent } from './pages/todo-compont/todo-compont.component';
 import { SurveyComponent } from './pages/survey/survey.component';
 import { AddClientComponent } from './pages/vehicke-parking/add-client/add-client.component';
+import { AngularConceptComponent } from './pages/angular-concept/angular-concept.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path:"addclient",
         component:AddClientComponent
+    },
+    {
+        path:"angular-concept",
+        component:AngularConceptComponent
     }
 ];
